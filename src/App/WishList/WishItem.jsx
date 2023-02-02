@@ -9,7 +9,7 @@ function WishItem({
     // eslint-disable-next-line max-len
     // La línea justo de debajo quiere decir que si done es true mete 'wish-list__item--done', y que si es false no mete nada
     <li className={`wish-list__item ${done ? 'wish-list__item--done' : ''}`}>
-      <input type="checkbox" id={`wish${id}`} checked={done} onChange={(e) => onDoneChange(e.target.value)} />
+      <input type="checkbox" id={`wish${id}`} checked={done} onChange={(e) => onDoneChange(e.target.checked)} />
       <label htmlFor={`wish${id}`}>{text}</label>
     </li>
   );
